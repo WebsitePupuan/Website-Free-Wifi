@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>System Alert</title>
+
+<style>
+
+body{
+margin:0;
+background:black;
+font-family:Arial, sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.box{
+background:#111;
+border:3px solid red;
+padding:40px;
+width:320px;
+text-align:center;
+color:white;
+border-radius:10px;
+box-shadow:0 0 30px red;
+animation:shake 0.15s infinite;
+}
+
+.title{
+color:#ff4444;
+font-size:22px;
+margin-bottom:15px;
+}
+
+.text{
+font-size:16px;
+margin-bottom:20px;
+}
+
+.btn{
+padding:10px 20px;
+background:red;
+border:none;
+color:white;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+}
+
+@keyframes shake{
+0%{transform:translate(2px,2px)}
+25%{transform:translate(-2px,-2px)}
+50%{transform:translate(2px,-2px)}
+75%{transform:translate(-2px,2px)}
+100%{transform:translate(2px,2px)}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<div class="title">⚠ SECURITY ALERT</div>
+
+<div class="text">
+Your device has been hacked
+</div>
+
+<button class="btn" onclick="closeTab()">Close</button>
+</div>
+
+<script>
+
+function closeTab(){
+window.open("","_self")
+window.close()
+}
+
+</script>
+
+</body>
+</html>
